@@ -1,8 +1,6 @@
-﻿using DataStructure;
-using DS_Algorithm;
-using System;
+﻿using System;
 
-namespace DataStructure
+namespace Datastructure
 {
     class Program
     {
@@ -11,22 +9,23 @@ namespace DataStructure
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter the Program number which is to be executed \n 1. Unordered List \n 2. Ordered List  \n 3. Simple Balance Parethesis \n 4. Bank Cash Counter \n 5. PallinDrome-Checker  \n 6. Hashing Function to search  \n 7. Exit");
+                Console.WriteLine("Enter Program number to get executed \n1. Unordred list \n2. Ordered list \n3. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
-
                 switch (option)
                 {
                     case 1:
-                        UnOrderedList list = new UnOrderedList();
-                        list.UnOrdered();
+                        Unorderedlist unordered = new Unorderedlist();
+                        unordered.Operation();
                         break;
                     case 2:
+                        Orderedlist ordered = new Orderedlist();
+                        ordered.Operation();
+                        break;
+                    case 3:
                         flag = false;
                         break;
-
                 }
             }
         }
     }
-
 }
